@@ -1,0 +1,465 @@
+/* ===== HEADER (original MedCare design) ===== */
+header {
+  background: #087f5b;
+  color: white;
+  padding: 18px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+nav button {
+  border: none;
+  background: transparent;
+  color: white;
+  padding: 10px 14px;
+  cursor: pointer;
+  font-size: 15px;
+  border-radius: 6px;
+}
+
+nav button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+nav button.active {
+  background: rgba(255, 255, 255, 0.25);
+  font-weight: bold;
+}
+
+/* ===== MAIN ===== */
+.container {
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+h1 {
+  margin-bottom: 25px;
+}
+
+h2 {
+  margin-bottom: 18px;
+  color: #087f5b;
+}
+
+/* ===== DASHBOARD ===== */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.card h3 {
+  font-size: 32px;
+  color: #087f5b;
+}
+
+.card p {
+  margin-top: 5px;
+  color: #666;
+}
+
+/* ===== PANEL ===== */
+.panel {
+  background: white;
+  padding: 25px;
+  margin-bottom: 25px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.panel p {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+/* ===== FORM ===== */
+form {
+  display: grid;
+  gap: 15px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  margin-top: 7px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  font-size: 15px;
+}
+
+textarea {
+  min-height: 90px;
+}
+
+.primary {
+  background: #087f5b;
+  color: white;
+  border: none;
+  padding: 13px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.primary:hover {
+  background: #066b4d;
+}
+
+/* ===== MEDICINE ===== */
+.medicine {
+  border: 1px solid #ddd;
+  padding: 18px;
+  margin-bottom: 15px;
+  border-radius: 9px;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  align-items: center;
+}
+
+.medicine h3 {
+  color: #087f5b;
+  margin-bottom: 8px;
+}
+
+.medicine p {
+  margin: 5px 0;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.reminder {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px 13px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.taken {
+  background: #16a34a;
+  color: white;
+  border: none;
+  padding: 10px 13px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.taken:disabled {
+  opacity: 0.85;
+  cursor: default;
+}
+
+.delete {
+  background: #dc2626;
+  color: white;
+  border: none;
+  padding: 10px 13px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* ===== APPOINTMENT ===== */
+.appointment {
+  border: 1px solid #ddd;
+  padding: 18px;
+  border-radius: 9px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.appointment h3 {
+  color: #087f5b;
+  margin-bottom: 8px;
+}
+
+.appointment p {
+  margin: 5px 0;
+}
+
+/* ===== MESSAGE (toast) ===== */
+.message {
+  background: #dcfce7;
+  color: #166534;
+  padding: 13px;
+  border-radius: 7px;
+  margin-bottom: 20px;
+  display: block;
+}
+
+/* ===== EMPTY ===== */
+.empty {
+  text-align: center;
+  color: #777;
+  padding: 20px;
+}
+
+/* ===== HEALTH ORGANIZER (first HTML file) ===== */
+hr {
+  border: none;
+  border-top: 1px solid #d1d5db;
+  margin: 25px 0;
+}
+
+.organizer-header p {
+  color: #666;
+  margin-top: 5px;
+}
+
+.organizer-list {
+  list-style: none;
+}
+
+.organizer-list li {
+  padding: 8px 0;
+  border-bottom: 1px dashed #d1d5db;
+}
+
+.organizer-list li:last-child {
+  border-bottom: none;
+}
+
+.note {
+  color: #777;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  padding: 25px;
+  color: #777;
+  font-size: 13px;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 700px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .medicine {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .appointment {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* =========================================================
+   IMPROVEMENTS (validation, reminders, organizer, print)
+   ========================================================= */
+
+/* Error toast (validation messages) */
+.message.error {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+/* On-screen reminder banner */
+.reminder-banner {
+  background: #fff7e6;
+  border-left: 5px solid #d68910;
+  padding: 13px 16px;
+  border-radius: 7px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn-dismiss {
+  background: white;
+  border: 1px solid #d68910;
+  color: #92400e;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Dashboard summary panels */
+.summary-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.summary-grid .panel {
+  margin-bottom: 0;
+}
+
+/* Past appointments look faded */
+.appointment.past {
+  opacity: 0.6;
+  background: #f9fafb;
+}
+
+.past-label {
+  color: #6b7280;
+  font-style: italic;
+}
+
+/* Health Organizer editing */
+.organizer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.organizer-subtitle {
+  color: #666;
+  margin-top: 5px;
+}
+
+.organizer-list {
+  list-style: none;
+  margin-bottom: 15px;
+}
+
+.organizer-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px dashed #d1d5db;
+}
+
+.organizer-list li:last-child {
+  border-bottom: none;
+}
+
+.inline-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 10px;
+  align-items: end;
+}
+
+.inline-form input {
+  margin-top: 0;
+}
+
+.delete.small {
+  padding: 6px 10px;
+  font-size: 13px;
+}
+
+.organizer-tools {
+  margin-bottom: 20px;
+}
+
+.note {
+  color: #777;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* Print: show only the organizer content */
+@media print {
+  header,
+  footer,
+  .no-print,
+  .reminder-banner,
+  .message {
+    display: none !important;
+  }
+
+  body {
+    background: white;
+  }
+
+  .panel {
+    box-shadow: none;
+    border: 1px solid #ddd;
+  }
+}
+
+/* Mobile adjustments for the new layouts */
+@media (max-width: 700px) {
+  .summary-grid,
+  .inline-form {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===== PROJECT REPORT PAGE ===== */
+.project-report .report-list {
+  padding-left: 20px;
+  line-height: 1.8;
+}
+
+.source-file {
+  margin-bottom: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px 14px;
+}
+
+.source-file summary {
+  cursor: pointer;
+  font-weight: bold;
+  color: #087f5b;
+}
+
+pre.code {
+  background: #f5f7f8;
+  padding: 12px;
+  border-radius: 7px;
+  overflow: auto;
+  max-height: 420px;
+  font-size: 12px;
+  white-space: pre;
+  margin-top: 10px;
+}
