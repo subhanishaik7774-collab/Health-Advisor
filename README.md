@@ -55,3 +55,4 @@ my-react-app/
 ├── package.json
 └── vite.config.js
 ```
+PPT link : https://docs.google.com/presentation/d/1H_1vGpBsnR-HG2RHr0Q1vFUTTMbTnzlJ/edit?usp=drivesdk&ouid=111019127888040027286&rtpof=true&sd=true
